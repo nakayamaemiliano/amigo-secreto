@@ -13,23 +13,23 @@ function agregarAmigo(){
   }
 
   input.value = "";
+  mostrarAmigos();
 
  
 }
 
-
 function mostrarAmigos() {
-
-  const lista = document.getElementById("listaAmigos");
-
-  lista.innerHTML = "";
-
-  
-  for (let i = 0; i < amigos.length; i++) {
-    const li = document.createElement("li");
-    li.textContent = amigos[i];
-    lista.appendChild(li);
-  }
+    
+    const lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
+    
+    for (let i = 0; i < amigos.length; i++) {
+        const elementoLista = document.createElement('li');
+        elementoLista.textContent = amigos[i];
+        
+        
+        lista.appendChild(elementoLista);
+    }
 }
 
 
@@ -43,5 +43,5 @@ function sortearAmigo() {
 
   const amigoSorteado = amigos[indiceAleatorio];
 
-  document.getElementById("resultado").innerHTML = `<li>${amigoSorteado}</li>`;
+  document.getElementById("resultado").innerHTML = `<li> El amigo secreto sorteado es: ${amigoSorteado}</li>`;
 }
